@@ -4,6 +4,7 @@ FROM registry.redhat.io/openshift4/ose-operator-registry:v4.12
 
 # Test disabled network access
 #RUN if curl -IsS www.google.com; then echo "ERROR: network access detected!"; exit 1; fi
+LABEL org.opencontainers.image.base.name="registry.redhat.io/openshift4/ose-operator-registry:v4.12"
 
 # Configure the entrypoint and command
 ENTRYPOINT ["/bin/opm"]
